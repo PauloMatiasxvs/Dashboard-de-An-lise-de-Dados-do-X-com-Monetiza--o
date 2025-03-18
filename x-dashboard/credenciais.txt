@@ -3,3 +3,5 @@ api key:0ZszHTKczaMFfNJDlsx5JjcoP
 api key secret:C352IHWfI0YhQTj2gE8RphbSOwn5d6aBunX18enMFT9CT5eW2S
 
 bearer token:AAAAAAAAAAAAAAAAAAAAALEZ0AEAAAAAnDK%2B7xlObfr19r2uAz4%2FT9AAUtg%3DjB3NqBcSMtBxDVBXnRJN8z1P43CaUckb3Ejog606ofGyY5p9AP
+
+api ;curl --request GET 'https://api.x.com/2/tweets?ids=1212092628029698048&tweet.fields=attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,text,withheld&expansions=referenced_tweets.id' --header 'Authorization: Bearer $BEARER_TOKEN'
