@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard interativo para análise de tweets do X">
+  <title>X Pulse - Análise de Tweets</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">X Pulse</h1>
+    <nav class="header-nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#premium" class="nav-link">Premium</a>
+      <a href="#about" class="nav-link">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="search-section">
+      <div class="search-wrapper">
+        <input type="text" id="keyword" placeholder="Digite uma palavra-chave (ex.: nike)" class="search-input">
+        <button onclick="fetchTweets()" class="search-btn">Pesquisar</button>
+      </div>
+      <div class="filter-wrapper">
+        <label for="sort">Ordenar por:</label>
+        <select id="sort" onchange="sortTweets()">
+          <option value="recent">Mais Recente</option>
+          <option value="likes">Mais Curtidas</option>
+          <option value="retweets">Mais Retweetado</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="tweets-section" id="tweets">
+      <div class="loader" id="loader"></div>
+      <!-- Tweets serão inseridos aqui dinamicamente -->
+    </section>
+
+    <aside class="stats-panel">
+      <h2>Estatísticas</h2>
+      <div class="stats-item">
+        <span class="stats-label">Tweets Carregados:</span>
+        <span class="stats-value" id="tweet-count">0</span>
+      </div>
+      <div class="stats-item">
+        <span class="stats-label">Total de Likes:</span>
+        <span class="stats-value" id="total-likes">0</span>
+      </div>
+      <div class="stats-item">
+        <span class="stats-label">Total de Retweets:</span>
+        <span class="stats-value" id="total-retweets">0</span>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 X Pulse. Criado com paixão por dados e design.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
